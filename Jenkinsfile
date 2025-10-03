@@ -3,14 +3,14 @@ pipeline {
         label 'AGENT-1'
     }
 
+ //Build
  stages {
     stage('Build') {
             steps {
                 script {
                    echo 'Building..'
                 }
-                
-            }
+             }
     }
     stage('Test') {
             steps {
@@ -18,12 +18,13 @@ pipeline {
                 echo 'Testing..'
             }
     }
+  }
     stage('Deploy') {
             steps {
                 script {
                 echo 'Deploying....'
             }
-    }
+        }
     }
     } 
  post { 
